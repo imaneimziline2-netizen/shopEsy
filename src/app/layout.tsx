@@ -1,15 +1,8 @@
-import type { Metadata } from 'next';
-import { Inter } from 'next/font/google';
-import './globals.css';
-import Header from '../components/Header';
-import Footer from '../components/Footer';
+import Footer from "../components/Footer";
+import Header from "../components/Header";
+import "./globals.css"
 
-const inter = Inter({ subsets: ['latin'] });
-
-export const metadata: Metadata = {
-  title: 'MiniShop - Votre boutique en ligne',
-  description: 'Découvrez nos produits de qualité',
-};
+import { CartProvider } from "../context/cartContext";
 
 export default function RootLayout({
   children,
@@ -18,14 +11,14 @@ export default function RootLayout({
 }) {
   return (
     <html lang="fr">
-      <body className={inter.className}>
-        <div className="min-h-screen flex flex-col">
+      <body>
+        <CartProvider>
           <Header />
-          <main className="flex-grow">
-            {children}
-          </main>
+
+          <main>{children}</main>
+
           <Footer />
-        </div>
+        </CartProvider>
       </body>
     </html>
   );
