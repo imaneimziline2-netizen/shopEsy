@@ -20,7 +20,6 @@ export default async function ProductPage({ params }: ProductPageProps) {
     <section className="max-w-6xl mx-auto px-4 py-12">
       <div className="grid md:grid-cols-2 gap-8 md:gap-12">
         
-        {/* LEFT - Image */}
         <div className="relative h-80 md:h-[500px] rounded-2xl overflow-hidden bg-gray-800">
           <Image
             src={product.image}
@@ -32,7 +31,6 @@ export default async function ProductPage({ params }: ProductPageProps) {
           />
         </div>
 
-        {/* RIGHT - Details */}
         <div className="flex flex-col justify-center">
           <Link
             href="/"

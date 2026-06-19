@@ -41,24 +41,24 @@ export const products: Product[] = [
     image: "https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=400&h=300&fit=crop",
     alt: "Smart watch"
   },
-  // {
-  //   id: 5,
-  //   name: "AirPods Pro",
-  //   slug: "airpods-pro",
-  //   price: 2799,
-  //   description: "Wireless earbuds with active noise cancellation",
-  //   category: "Audio",
-  //   image: "https://images.unsplash.com/photo-1600290967668-3e0f04a08c36?w=400&h=300&fit=crop",
-  //   alt: "AirPods Pro"
-  // },
-  // {
-  //   id: 6,
-  //   name: "iPad Pro",
-  //   slug: "ipad-pro",
-  //   price: 8999,
-  //   description: "Powerful tablet with M2 chip and Liquid Retina display",
-  //   category: "Electronics",
-  //   image: "https://images.unsplash.com/photo-1544244015-0df4b3ff2c0b?w=400&h=300&fit=crop",
-  //   alt: "iPad Pro"
-  // }
+  {
+    id: 5,
+    name: "AirPods Pro",
+    slug: "airpods-pro",
+    price: 2799,
+    description: "Wireless earbuds with active noise cancellation",
+    category: "Audio",
+    image: "https://images.unsplash.com/photo-1600290967668-3e0f04a08c36?w=400&h=300&fit=crop",
+    alt: "AirPods Pro"
+  },
+  {
+    id: 6,
+    name: "iPad Pro",
+    slug: "ipad-pro",
+    price: 8999,
+    description: "Powerful tablet with M2 chip and Liquid Retina display",
+    category: "Electronics",
+    image: "https://images.unsplash.com/photo-1544244015-0df4b3ff2c0b?w=400&h=300&fit=crop",
+    alt: "iPad Pro"
+  }
 ];

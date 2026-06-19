@@ -1,4 +1,3 @@
-/* globals.css */
 @import "tailwindcss";
 
 @theme {
@@ -193,7 +192,6 @@
   -ms-overflow-style: none;
 }
 
-/* ============ FEATURES CARDS - OPACITÉ AJOUTÉE ============ */
 
 /* Container des features cards */
 .glass-white {

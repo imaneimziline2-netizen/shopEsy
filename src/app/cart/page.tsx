@@ -3,7 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useCart } from "../../context/cartContext";
-import { Trash2, Plus, Minus, ShoppingBag, ChevronDown } from "lucide-react";
+import { Trash2, Plus, Minus, ShoppingBag } from "lucide-react";
 
 export default function CartPage() {
   const { cartItems, removeFromCart, updateQuantity, getTotalItems, getTotalPrice } = useCart();
@@ -34,11 +34,9 @@ export default function CartPage() {
 
       <div className="grid md:grid-cols-3 gap-8">
         
-        {/* LEFT - Products (2/3) */}
         <div className="md:col-span-2 space-y-4">
           <div className="bg-[#1e293b] rounded-2xl shadow-2xl p-6 border border-gray-700/50">
             
-            {/* Header */}
             <div className="flex justify-between items-center mb-6 pb-4 border-b border-gray-700">
               <h2 className="text-white font-semibold text-lg">Produits ({getTotalItems()})</h2>
               <button className="text-gray-400 hover:text-white transition-colors text-sm">
@@ -46,7 +44,6 @@ export default function CartPage() {
               </button>
             </div>
 
-            {/* Products List */}
             <div className="space-y-6">
               {cartItems.map((item) => (
                 <div
@@ -64,7 +61,6 @@ export default function CartPage() {
                     />
                   </div>
 
-                  {/* Details */}
                   <div className="flex-1">
                     <div className="flex justify-between items-start">
                       <div>
@@ -118,12 +114,10 @@ export default function CartPage() {
           </div>
         </div>
 
-        {/* RIGHT - Order Summary (1/3) */}
         <div className="md:col-span-1">
           <div className="bg-[#1e293b] rounded-2xl shadow-2xl p-6 border border-gray-700/50 sticky top-24">
             <h2 className="text-white font-bold text-lg mb-6">Récapitulatif</h2>
 
-            {/* Promo Code */}
             <div className="mb-6">
               <label className="text-gray-400 text-sm block mb-2">Code promo / Réduction</label>
               <div className="flex gap-2">
@@ -167,7 +161,6 @@ export default function CartPage() {
               </p>
             </div>
 
-            {/* Checkout Buttons */}
             <div className="space-y-3">
               <button className="w-full bg-gradient-to-r from-indigo-600 to-pink-600 text-white py-3 rounded-xl font-semibold hover:shadow-lg transition-all duration-300 hover:scale-105">
                 Passer la commande
@@ -180,10 +173,9 @@ export default function CartPage() {
               </button>
             </div>
 
-            {/* Savings */}
             <div className="mt-6 pt-4 border-t border-gray-700">
               <div className="flex justify-between text-sm">
-                <span className="text-green-400">💰 Économies totales</span>
+                <span className="text-green-400"> Économies totales</span>
                 <span className="text-green-400 font-semibold">150 DH</span>
               </div>
               <div className="flex justify-between text-sm mt-1">

@@ -11,7 +11,6 @@ export default function Header() {
     <header className="bg-gray-900/95 backdrop-blur-md shadow-lg sticky top-0 z-50 border-b border-gray-700/50">
       <div className="container mx-auto px-4 py-4">
         <div className="flex justify-between items-center">
-          {/* Logo */}
           <Link href="/" className="flex items-center gap-2 group">
             <div className="bg-gradient-to-r from-indigo-600 to-pink-600 p-2 rounded-xl group-hover:scale-110 transition-transform duration-300">
               <Package className="text-white" size={24} />
@@ -21,7 +20,6 @@ export default function Header() {
             </span>
           </Link>
 
-          {/* Navigation */}
           <nav className="flex items-center gap-6">
             <Link
               href="/"

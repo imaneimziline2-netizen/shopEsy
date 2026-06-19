@@ -7,7 +7,6 @@ import { Sparkles, ShoppingBag, Truck, Shield } from 'lucide-react';
 export default function Home() {
   return (
     <div>
-      {/* Hero Section avec animation */}
       <div className="relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-indigo-600/20 to-pink-600/20" />
         <div className="container mx-auto px-4 py-20 text-center relative">
@@ -27,11 +26,9 @@ export default function Home() {
         </div>
       </div>
 
-      {/* Features Section */}
       <div className="glass-white py-12 mt-8">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {/* Card 1 - Livraison */}
             <div className="text-center p-6 rounded-2xl bg-white/10 backdrop-blur-sm border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105">
               <div className="w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 bg-blue-500/20 border border-blue-400/30">
                 <Truck className="text-blue-400" size={32} />
@@ -40,7 +37,6 @@ export default function Home() {
               <p className="text-white/70">Livraison gratuite à partir de 500 DH</p>
             </div>
 
-            {/* Card 2 - Paiement */}
             <div className="text-center p-6 rounded-2xl bg-white/10 backdrop-blur-sm border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105">
               <div className="w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 bg-green-500/20 border border-green-400/30">
                 <Shield className="text-green-400" size={32} />
@@ -49,7 +45,6 @@ export default function Home() {
               <p className="text-white/70">100% sécurisé avec SSL</p>
             </div>
 
-            {/* Card 3 - Prix */}
             <div className="text-center p-6 rounded-2xl bg-white/10 backdrop-blur-sm border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105">
               <div className="w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 bg-orange-500/20 border border-orange-400/30">
                 <ShoppingBag className="text-orange-400" size={32} />
@@ -61,7 +56,6 @@ export default function Home() {
         </div>
       </div>
 
-      {/* Products Section */}
       <div className="container mx-auto px-4 py-16">
         <div className="text-center mb-12">
           <h2 className="text-4xl font-bold text-white mb-4">
