@@ -1,4 +1,3 @@
-// app/products/[slug]/page.tsx
 import Image from "next/image";
 import { products } from "../../../data/products";
 import Link from "next/link";
@@ -18,51 +17,58 @@ export default async function ProductPage({ params }: ProductPageProps) {
   }
 
   return (
-    <section className="max-w-5xl mx-auto px-4 py-8">
-      <div className="bg-white/95 backdrop-blur-md rounded-2xl shadow-2xl p-6 md:p-8">
-        <Link
-          href="/"
-          className="inline-flex items-center gap-2 text-indigo-600 hover:text-indigo-800 transition-colors mb-6 font-medium"
-        >
-          ← Retour aux produits
-        </Link>
+    <section className="max-w-6xl mx-auto px-4 py-12">
+      <div className="grid md:grid-cols-2 gap-8 md:gap-12">
+        
+        {/* LEFT - Image */}
+        <div className="relative h-80 md:h-[500px] rounded-2xl overflow-hidden bg-gray-800">
+          <Image
+            src={product.image}
+            alt={product.alt || product.name}
+            fill
+            className="object-cover"
+            sizes="(max-width: 768px) 100vw, 50vw"
+            priority
+          />
+        </div>
 
-        <div className="grid md:grid-cols-2 gap-10">
-          {/* Image du produit */}
-          <div className="relative h-80 md:h-[500px] rounded-xl overflow-hidden">
-            <Image
-              src={product.image}
-              alt={product.alt || product.name}
-              fill
-              className="object-cover"
-              sizes="(max-width: 768px) 100vw, 50vw"
-              priority
-            />
+        {/* RIGHT - Details */}
+        <div className="flex flex-col justify-center">
+          <Link
+            href="/"
+            className="inline-flex items-center gap-2 text-indigo-400 hover:text-indigo-300 transition-colors mb-4 font-medium"
+          >
+            ← Retour aux produits
+          </Link>
+
+          <div className="mb-3">
+            <span className="text-sm font-semibold text-pink-400 bg-pink-500/20 px-4 py-1.5 rounded-full border border-pink-400/20 inline-block">
+              {product.category}
+            </span>
           </div>
 
-          {/* Détails du produit */}
-          <div className="flex flex-col justify-center">
-            <div className="mb-2">
-              <span className="text-sm font-semibold text-indigo-600 bg-indigo-100 px-3 py-1 rounded-full">
-                {product.category}
-              </span>
-            </div>
+          <h1 className="text-4xl md:text-5xl font-bold text-white mb-3">
+            {product.name}
+          </h1>
 
-            <h1 className="text-4xl md:text-5xl font-bold text-gray-800 mb-4">
-              {product.name}
-            </h1>
+          <p className="text-3xl md:text-4xl font-bold bg-gradient-to-r from-yellow-400 to-pink-400 bg-clip-text text-transparent mb-4">
+            {product.price} DH
+          </p>
 
-            <p className="text-3xl md:text-4xl font-bold bg-gradient-to-r from-indigo-600 to-pink-600 bg-clip-text text-transparent mb-4">
-              {product.price} DH
-            </p>
-
-            <p className="text-gray-600 leading-7 mb-6">
+          <div className="border-t border-b border-gray-700 py-4 my-4">
+            <p className="text-gray-400 leading-relaxed text-base">
               {product.description}
             </p>
-
-            {/* ✅ Utilisation du composant client pour le panier */}
-            <AddToCartButton product={product} />
           </div>
+
+          <div className="flex items-center gap-2 mb-6">
+            <span className="text-gray-400 font-medium">Catégorie :</span>
+            <span className="text-gray-300 bg-gray-700/50 px-3 py-1 rounded-full text-sm">
+              {product.category}
+            </span>
+          </div>
+
+          <AddToCartButton product={product} />
         </div>
       </div>
     </section>
