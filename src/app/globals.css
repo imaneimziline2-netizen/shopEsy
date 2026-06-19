@@ -94,10 +94,15 @@
   animation: gradient-shift 3s ease infinite;
 }
 
-/* Glassmorphism plus poussé */
+/* Glassmorphism plus poussé avec opacité */
 .bg-white\/10 {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.bg-white\/20 {
   background: rgba(255, 255, 255, 0.08);
-  border: 1px solid rgba(255, 255, 255, 0.12);
+  border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .bg-white\/80 {
@@ -144,6 +149,7 @@
   background-size: 200px 200px;
   pointer-events: none;
   animation: particles 20s linear infinite;
+  /* opacity: 0.2; */
 }
 
 @keyframes particles {
@@ -187,3 +193,87 @@
   -ms-overflow-style: none;
 }
 
+/* ============ FEATURES CARDS - OPACITÉ AJOUTÉE ============ */
+
+/* Container des features cards */
+.glass-white {
+  background: rgba(255, 255, 255, 0.03) !important;
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 20px;
+}
+
+/* Chaque feature card */
+.feature-card {
+  background: rgba(255, 255, 255, 0.04) !important;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 16px;
+  padding: 24px;
+  text-align: center;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.feature-card:hover {
+  background: rgba(255, 255, 255, 0.08) !important;
+  transform: translateY(-6px);
+  border-color: rgba(255, 255, 255, 0.12);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+}
+
+.feature-icon {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 16px;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.feature-card:hover .feature-icon {
+  transform: scale(1.1) rotate(-5deg);
+}
+
+.feature-icon-blue {
+  background: rgba(59, 130, 246, 0.15);
+  border: 2px solid rgba(59, 130, 246, 0.2);
+  color: #60a5fa;
+}
+
+.feature-icon-green {
+  background: rgba(16, 185, 129, 0.15);
+  border: 2px solid rgba(16, 185, 129, 0.2);
+  color: #34d399;
+}
+
+.feature-icon-orange {
+  background: rgba(245, 158, 11, 0.15);
+  border: 2px solid rgba(245, 158, 11, 0.2);
+  color: #fbbf24;
+}
+
+.feature-title {
+  color: rgba(255, 255, 255, 0.9);
+  font-weight: 700;
+  font-size: 1.1rem;
+  margin-bottom: 8px;
+}
+
+.feature-desc {
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 0.95rem;
+}
+
+/* Hero section overlay plus transparent */
+.hero-overlay {
+  background: rgba(0, 0, 0, 0.2);
+}
+
+/* Gradient overlay hero */
+.bg-gradient-to-r.from-indigo-600\/20.to-pink-600\/20 {
+  background: linear-gradient(135deg, rgba(99, 102, 241, 0.1), rgba(236, 72, 153, 0.1));
+}
